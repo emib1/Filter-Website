@@ -1,0 +1,278 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Shadows+Into+Light&display=swap');
+
+:root{
+    --iconsh1spans:#ffb5a7;
+    --h1buttons:black;
+    --fontfam: 'Caveat', cursive;
+    --font-family: 'Shadows Into Light', cursive;
+    --lightorange:#fcbf49;
+    ---pinky:#fcbf49;
+    --bluish:#6FEDD6;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--font-family);
+
+}
+
+body{
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+button {
+    padding: 1rem;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;  
+    border: 3px solid black;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 55px;
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+h1 span {
+    color: var(--iconsh1spans);
+    font-weight: bold;
+    font-size:70px ;
+
+}
+
+
+/********  Nav ***********/
+nav{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+
+
+
+.links a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin: 0 0.8rem;
+    cursor: pointer;
+}
+
+
+.links a:visited{
+    color: black;
+}
+
+.icon {
+    color: var(--iconsh1spans);
+    margin: 0;
+    cursor: pointer;
+}
+
+.icon:hover{
+    color: var(---pinky);
+}
+
+
+
+/****************Welcoms section*************************/
+
+.welcome{
+    height: 80vh;
+    text-align: center;
+    padding:2.5rem;
+    background-image: url("/images/bg-image.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-color: var(--iconsh1spans);
+    background-blend-mode: multiply;
+    justify-content: center;
+    width: 100vw;
+}
+
+
+
+
+
+.welcome button:hover {
+    background-color: white;
+   
+}
+
+
+
+/******about us*********/
+
+.about{
+    display: grid;
+    margin: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+
+.about button {
+    min-width: 20%;
+    margin-top: 1rem;
+}
+
+
+.about button:hover{
+    background-color: black;
+    color: white;
+}
+
+.about-img__container{
+    position:relative;
+    margin-top: 2.5rem;
+    margin-left: 3.5rem;
+}
+
+.about-img__container img {
+    width: 100%;
+}
+.about-img__container::before{
+    content: "";
+    position: absolute;
+    top: -1.5rem;
+    left: -1.7rem;
+    width: 100%;
+    height: 100%;
+    outline: 0.5rem solid var(--lightorange);
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+
+.about-img__container:hover:before {
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width:850px) {
+    .about-img__container::before{
+        max-height: 50%;
+    }
+}
+@media screen and (max-width:650px){
+    .about {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+
+
+
+/***************************************/
+.our-store{
+    text-align: center;
+    background-color:#cdb4db ;
+    width: 100vw;
+    height: 100%;
+
+
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    margin: 1.7rem 0.5rem;
+}
+
+.buttons button:hover {
+    background-color: white;
+    color: #ffb5a7;
+    border: none;
+}
+
+.img-container {
+    display: grid ;
+    max-width: 70vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+    margin: auto;
+
+}
+
+.img {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px ;  
+    height: 70%;  
+}
+
+@media screen and (max-width:750px) {
+    .img-container{
+        display: grid ;
+        grid-template-columns: 1fr  1fr;
+        grid-template-rows: repeat(6, 1fr);
+        column-gap: 15px;
+        margin: auto;
+
+    }
+}
+
+
+.img:hover{
+    transform: scale(1.1);
+}
+
+/********individual items************/
+
+.item-img{
+    background-color: white;
+    border-radius: 20px 20px 20px 20px ;  
+
+} 
+
+
+.itemdes{
+   display: flex;
+   justify-content: space-around;
+}
+h4 {
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:750px){
+    .margin{
+        margin-bottom: 2.5rem;
+    
+    }
+}
+
+@media screen and (max-width:750px){
+.last{
+    margin-bottom: 2.5rem;
+}
+}
+
+
+/****************hidden***************/
+
+.hidden {
+    display: none;
+}
