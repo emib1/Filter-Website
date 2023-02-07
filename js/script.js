@@ -71,3 +71,22 @@ icecreamButton.addEventListener("click", function(){
 
       }
 })
+
+
+/********************cart */
+
+
+const cart = document.querySelector(".cart");
+const cartItems = document.querySelector(".cart-items");
+
+
+cart.addEventListener("click", function(){
+   cartItems.classList.toggle("hide");
+});
+
+
+
+
+
+
+/************************* */
